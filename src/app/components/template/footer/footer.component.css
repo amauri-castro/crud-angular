@@ -1,0 +1,13 @@
+.footer {
+    /*define a posição fixa do footer e o coloca em baixo*/
+    position: fixed;
+    bottom: 0;
+
+    /*seta o flexbox e a alinha a direita*/
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer a {
+    text-decoration: none;
+}
