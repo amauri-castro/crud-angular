@@ -32,6 +32,11 @@ export class ProductService {
     return this.http.put<Product>(url, product);
   }
 
+  delete(id: number): Observable<void> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.delete<void>(url);
+  }
+
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'X', {
       duration: 3000,
