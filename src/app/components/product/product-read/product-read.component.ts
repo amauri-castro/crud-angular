@@ -18,9 +18,12 @@ export class ProductReadComponent implements OnInit {
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts(){
     this.productService.read().subscribe(products => {
       this.products = products;
-      console.log(products);
     } )
   }
 
@@ -37,10 +40,12 @@ export class ProductReadComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {
       if(result) {
         console.log('produto excluido ->', productId);
-        this.productService.showMessage('Produto excluído com sucesso');
-
+        this.productService.delete(productId).subscribe(() => {
+          this.getProducts();
+          this.productService.showMessage('Produto excluído com sucesso');
+        });
       }
-    })
+    });
   }
 
 }
