@@ -1,0 +1,9 @@
+.snackbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .snackbar-content .icon-close {
+    cursor: pointer;
+  }
