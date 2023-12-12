@@ -1,0 +1,11 @@
+.mat-dialog-container {
+    max-width: 80vw;
+}
+
+.mat-dialog-actions {
+    justify-content: center;
+}
+
+.mat-dialog-content {
+    text-align: center;
+}
