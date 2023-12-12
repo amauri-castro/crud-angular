@@ -12,4 +12,5 @@ table {
 
 .delete > i {
     color: #FF0000;
+    cursor: pointer;
 }
